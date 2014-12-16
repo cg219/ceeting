@@ -2,8 +2,8 @@
 
 module.exports = function(grunty){
 
-	var bowerScripts = [];
-	var uglifyScripts = ["dev/js/*"];
+	var libraryScripts = [];
+	var sourceScripts = ["src/js/*"];
 	var styles = [];
 
 	grunty.initConfig({
@@ -14,7 +14,7 @@ module.exports = function(grunty){
 					paths: ["public/css"]
 				},
 				files: {
-					"dev/css/styles.css" : "dev/less/styles.less"
+					"src/css/styles.css" : "src/less/styles.less"
 				}
 			}
 		},
@@ -35,12 +35,12 @@ module.exports = function(grunty){
 			},
 			libs: {
 				files: {
-					"public/js/libs.min.js" : bowerScripts
+					"public/js/libs.min.js" : libraryScripts
 				}
 			},
 			scripts: {
 				files: {
-					"public/js/scripts.min.js" : uglifyScripts
+					"public/js/scripts.min.js" : sourceScripts
 				}
 			}
 		},
@@ -64,7 +64,7 @@ module.exports = function(grunty){
 				spawn: false
 			},
 			scripts: {
-				files: ["dev/js/*.js"],
+				files: ["src/js/*.js"],
 				tasks: ["uglify:scripts"]
 			},
 			pages: {
@@ -72,7 +72,7 @@ module.exports = function(grunty){
 				tasks: ["jade"]
 			},
 			css: {
-				files: ["dev/less/*"],
+				files: ["src/less/*"],
 				tasks: ["less", "cssmin"]
 			}
 		},
