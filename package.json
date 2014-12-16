@@ -1,0 +1,22 @@
+{
+  "name": "ceeting",
+  "version": "0.0.1",
+  "description": "ceeting =======",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cg219/ceeting.git"
+  },
+  "author": "Clemente Gomez",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/cg219/ceeting/issues"
+  },
+  "homepage": "https://github.com/cg219/ceeting",
+  "dependencies": {
+    "express": "^4.10.2"
+  }
+}
