@@ -1,9 +1,9 @@
-	var path = require("path");
+var path = require("path");
 
 module.exports = function(grunty){
 
-	var libraryScripts = [];
-	var sourceScripts = ["src/js/*"];
+	var libraryScripts = ["bower_components/angular/angular.js", "bower_components/angular-route/angular-route.js"];
+	var sourceScripts = ["src/js/*.js"];
 	var styles = [];
 
 	grunty.initConfig({
