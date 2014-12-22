@@ -11,20 +11,20 @@ module.exports = function(router){
 		// res.send("Here");
 	})
 
-	router.get("*", function(req, res, next){
-		var err = new Error();
-		err.status = 404;
+	// router.get("*", function(req, res, next){
+	// 	var err = new Error();
+	// 	err.status = 404;
 
-		next(err);
-	})
+	// 	next(err);
+	// })
 
-	router.use(function(err, req, res, next){
-		if(err.status != 404){
-			return next();
-		}
+	// router.use(function(err, req, res, next){
+	// 	if(err.status != 404){
+	// 		return next();
+	// 	}
 
-		res.redirect("/");
-	})
+	// 	res.redirect("/");
+	// })
 
 	return router;
 }
