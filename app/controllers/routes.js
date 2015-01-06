@@ -1,30 +1,25 @@
 module.exports = function(router){
 	router.get("/", function(req, res){
-		console.log("Hi");
-		res.send("Hi");
-	})
 
-	router.get("/login", function(req, res){
-		console.log("Login Page");
 		res.set("Content-Type", "text/html");
-		res.render("login.html");
-		// res.send("Here");
+		res.render("index");
 	})
 
-	// router.get("*", function(req, res, next){
-	// 	var err = new Error();
-	// 	err.status = 404;
+	router.get("*", function(req, res, next){
+		var err = new Error();
+		err.status = 404;
 
-	// 	next(err);
-	// })
+		next(err);
+	})
 
-	// router.use(function(err, req, res, next){
-	// 	if(err.status != 404){
-	// 		return next();
-	// 	}
+	router.use(function(err, req, res, next){
+		if(err.status != 404){
+		console.log("HOWHOOODY");
+			return next();
+		}
 
-	// 	res.redirect("/");
-	// })
+		res.redirect("/");
+	})
 
 	return router;
 }

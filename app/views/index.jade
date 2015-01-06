@@ -1,8 +1,8 @@
 doctype html5
-- var theTitle = "Login to Mini Ceeting"
 html
 	include partials/head.jade
-	body
-		
+	body(ng-app="Ceeting")
+		h1 Mini Ceeting
+		div(ng-view="")
 		script(src="js/libs.min.js")
 		script(src="js/scripts.min.js")

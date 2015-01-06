@@ -2,8 +2,8 @@ var path = require("path");
 
 module.exports = function(grunty){
 
-	var libraryScripts = ["bower_components/angular/angular.js", "bower_components/angular-route/angular-route.js"];
-	var sourceScripts = ["src/js/*.js"];
+	var libraryScripts = ["bower_components/angular/angular.js", "bower_components/angular-route/angular-route.js", "bower_components/angular-resource/angular-resource.js"];
+	var sourceScripts = ["src/js/*.js", "src/js/factories/*.js", "src/js/controllers/*.js"];
 	var styles = [];
 
 	grunty.initConfig({
@@ -64,7 +64,7 @@ module.exports = function(grunty){
 				spawn: false
 			},
 			scripts: {
-				files: ["src/js/*.js"],
+				files: ["src/js/**/*.js"],
 				tasks: ["uglify:scripts"]
 			},
 			pages: {

@@ -1,8 +1,6 @@
-doctype html5
-- var theTitle = "Login to Mini Ceeting"
-html
-	include partials/head.jade
-	body
-		h1 Login
-		script(src="js/libs.min.js")
-		script(src="js/scripts.min.js")
+doctype html
+form(novalidate)
+	input(type="text", required=true, ng-model="username", placeholder="Username")
+	input(type="password", required=true, ng-model="password", placeholder="Password")
+
+	button(type=submit, ng-click="trace(username)") Login/Sign Up
