@@ -4,13 +4,13 @@ var model = mongoose.model("User", mongoose.Schema({
 		type: String,
 		unique: true,
 		required: true
-	}.
+	},
 	pass: {
 		type: String,
 		required: true,
 	},
 	charts: {
-		type: Mixed
+		type: {}
 	}
 }))
 

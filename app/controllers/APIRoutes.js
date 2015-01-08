@@ -1,6 +1,10 @@
+var loginController = require("./LoginController");
+
 module.exports = function(router){
 	router.post("/login", function(req, res, params){
 		
+		loginController.login();
+
 		res.json({
 			username: req.param("username"),
 			password: req.param("password")
