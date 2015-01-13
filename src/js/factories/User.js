@@ -6,6 +6,14 @@ angular.module("Ceeting").factory("UserAPI", ["$resource", function(resource){
 				username: "@username",
 				password: "@password"
 			}
+		},
+		register: {
+			method: "POST",
+			url: "/api/v1/register",
+			params: {
+				username: "@username",
+				password: "@password"
+			}
 		}
 	});
 }])
